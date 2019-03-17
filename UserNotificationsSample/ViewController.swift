@@ -10,28 +10,15 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
-
+    let userNotification = UserNotification(center: .current())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        userNotification.requestNotificationAuthorization()
     }
-
-    func requestNotificationAuthorization() {
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            guard granted else  {
-                print("Not granted")
-                return
-            }
-            
-            print("Granted")
-        }
+    
+    @IBAction func notify(_ sender: Any) {
+        userNotification.notify()
     }
-
 }
 

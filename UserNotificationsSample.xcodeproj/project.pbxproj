@@ -12,6 +12,7 @@
 		97AC2FF4223E8BE800F8F0FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AC2FF2223E8BE800F8F0FE /* Main.storyboard */; };
 		97AC2FF6223E8BEA00F8F0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AC2FF5223E8BEA00F8F0FE /* Assets.xcassets */; };
 		97AC2FF9223E8BEA00F8F0FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97AC2FF7223E8BEA00F8F0FE /* LaunchScreen.storyboard */; };
+		97AC3001223E8F9A00F8F0FE /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AC3000223E8F9A00F8F0FE /* UserNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		97AC2FF5223E8BEA00F8F0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97AC2FF8223E8BEA00F8F0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97AC2FFA223E8BEA00F8F0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97AC3000223E8F9A00F8F0FE /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				97AC2FEE223E8BE800F8F0FE /* AppDelegate.swift */,
 				97AC2FF0223E8BE800F8F0FE /* ViewController.swift */,
+				97AC3000223E8F9A00F8F0FE /* UserNotification.swift */,
 				97AC2FF2223E8BE800F8F0FE /* Main.storyboard */,
 				97AC2FF5223E8BEA00F8F0FE /* Assets.xcassets */,
 				97AC2FF7223E8BEA00F8F0FE /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				97AC2FF1223E8BE800F8F0FE /* ViewController.swift in Sources */,
 				97AC2FEF223E8BE800F8F0FE /* AppDelegate.swift in Sources */,
+				97AC3001223E8F9A00F8F0FE /* UserNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
