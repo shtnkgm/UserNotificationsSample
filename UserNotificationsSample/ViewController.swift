@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    func requestNotificationAuthorization() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge, .sound, .alert]) { granted, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard granted else  {
+                print("Not granted")
+                return
+            }
+            
+            print("Granted")
+        }
+    }
 
 }
 
