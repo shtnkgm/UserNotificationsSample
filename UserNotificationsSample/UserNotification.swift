@@ -49,6 +49,15 @@ class UserNotification: NSObject {
                                             trigger: trigger)
         center.add(request, withCompletionHandler: nil)
     }
+    
+    func getNotification() {
+        center.getDeliveredNotifications { notifications in
+            print("\(notifications.count)件の通知を取得")
+            notifications.map { $0.request }.forEach {
+                print("\($0.identifier) \($0.content.title)")
+            }
+        }
+    }
 }
 
 extension UserNotification: UNUserNotificationCenterDelegate {

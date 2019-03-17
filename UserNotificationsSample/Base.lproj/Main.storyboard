@@ -18,18 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce1-l7-vJd">
-                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
-                                <state key="normal" title="通知"/>
-                                <connections>
-                                    <action selector="notify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNi-uc-7gr"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fYa-bL-Zri">
+                                <rect key="frame" x="95.5" y="293.5" width="184" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce1-l7-vJd">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
+                                        <state key="normal" title="3秒後にローカル通知"/>
+                                        <connections>
+                                            <action selector="notify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNi-uc-7gr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gla-kF-twu">
+                                        <rect key="frame" x="0.0" y="50" width="184" height="30"/>
+                                        <state key="normal" title="通知センターの通知を取得"/>
+                                        <connections>
+                                            <action selector="getNotificationInNotificationCenter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5e-xz-aeo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ce1-l7-vJd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7NK-WH-Zjo"/>
-                            <constraint firstItem="ce1-l7-vJd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JX4-HB-k2r"/>
+                            <constraint firstItem="fYa-bL-Zri" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FMl-m6-79e"/>
+                            <constraint firstItem="fYa-bL-Zri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mz2-08-VSa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -20,5 +20,9 @@ class ViewController: UIViewController {
     @IBAction func notify(_ sender: Any) {
         userNotification.notify()
     }
+    
+    @IBAction func getNotificationInNotificationCenter(_ sender: Any) {
+        userNotification.getNotification()
+    }
 }
 
